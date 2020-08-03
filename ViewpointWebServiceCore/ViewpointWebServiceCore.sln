@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewpointWebServiceCore", "ViewpointWebServiceCore\ViewpointWebServiceCore.csproj", "{EF7178D6-B347-4493-A0EC-262EB629AC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JessieProvider", "JessieProvider\JessieProvider.csproj", "{A314248D-DB1A-42ED-A6D5-19CEFFCE5C44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF7178D6-B347-4493-A0EC-262EB629AC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7178D6-B347-4493-A0EC-262EB629AC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7178D6-B347-4493-A0EC-262EB629AC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7178D6-B347-4493-A0EC-262EB629AC23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A314248D-DB1A-42ED-A6D5-19CEFFCE5C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A314248D-DB1A-42ED-A6D5-19CEFFCE5C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A314248D-DB1A-42ED-A6D5-19CEFFCE5C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A314248D-DB1A-42ED-A6D5-19CEFFCE5C44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C95400B-FED4-406A-99A5-F8677468A18E}
+	EndGlobalSection
+EndGlobal
