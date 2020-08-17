@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace ViewpointWebServiceCore.Controllers
 {
@@ -9,9 +10,10 @@ namespace ViewpointWebServiceCore.Controllers
         [HttpGet()]
         [Route("api/Status")]
         [Authorize]
-        public IActionResult Test()
+        [EnableCors]
+        public IActionResult ValidateToken()
         {
-            string message = "Hello World";
+            string message = "Validate Token";
             return Ok(new { message });
         }
     }

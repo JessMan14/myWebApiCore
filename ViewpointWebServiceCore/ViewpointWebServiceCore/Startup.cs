@@ -16,6 +16,8 @@ namespace ViewpointWebServiceCore
 {
     public class Startup
     {
+        readonly string AllowedOrigins = "_AllOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,7 +35,7 @@ namespace ViewpointWebServiceCore
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1 " + DateTime.Now.ToString(),
-                    Title = "OnlinePortalWebServiceCore",
+                    Title = "ViewPointWebServiceCore",
                     Description = "ASP.NET Core Web API",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
@@ -43,6 +45,18 @@ namespace ViewpointWebServiceCore
                         Url = new Uri("https://Wiildan.com/"),
                     }
                 });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: AllowedOrigins,
+                                  builder =>
+                                  {
+                                      builder
+                                      .AllowAnyOrigin()
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod();
+                                  });
             });
 
             services.AddSwaggerGenNewtonsoftSupport();
@@ -95,9 +109,10 @@ namespace ViewpointWebServiceCore
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors(AllowedOrigins);
             app.UseAuthentication();
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
